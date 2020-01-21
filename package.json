@@ -13,6 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "@mapbox/mapbox-gl-geocoder": "^4.5.1",
+    "@mapbox/mapbox-sdk": "^0.9.0",
     "@zeit/next-css": "^1.0.1",
     "directory-named-webpack-plugin": "^4.0.1",
     "mapbox-gl": "^1.6.1",
