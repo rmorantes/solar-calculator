@@ -4,7 +4,37 @@ const LAYERS = [
     id: 'results',
     layout: {
       'icon-allow-overlap': true,
-      'icon-image': 'building'
+      'icon-image': [
+        'step',
+        ['zoom'],
+        'building',
+        17, 'pencil'
+      ],
+      'text-allow-overlap': true,
+      'text-field': [
+        'step',
+        ['zoom'],
+        '',
+        17, 'Click me and then map to start calculating!',
+        18, 'Double click map to finish drawing!',
+        21.5, 'Whoa there, buddy!'
+      ],
+      'text-font': ['Open Sans Bold', 'Arial Unicode MS Bold'],
+      'text-max-width': 15,
+      'text-offset': [
+        'step',
+        ['zoom'],
+        ['literal', [0, 3]],
+        21.5,
+        ['literal', [0, 2.25]]
+      ],
+      'text-optional': true,
+      'text-size': 20
+    },
+    paint: {
+      'text-color': 'orange',
+      'text-halo-color': 'black',
+      'text-halo-width': 2
     },
     source: 'results',
     type: 'symbol'

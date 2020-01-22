@@ -5,9 +5,9 @@ const Logo = () => (
 const Wrapper = styled.h1`
   color: orange;
   font-family: arial;
-  font-size: 2rem;
+  font-size: 3rem;
   letter-spacing: 0.1rem;
-  margin-top: 2rem;
+  margin-top: 4rem;
   text-align: center;
   width: 100%;
 `

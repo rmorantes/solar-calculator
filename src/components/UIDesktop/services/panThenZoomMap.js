@@ -1,6 +1,6 @@
 import sleep from 'src/services/sleep'
 
-// TODO: Temporarily prevent user control of camera while executing. ~ RM
+// TODO: Temporarily prevents user control of camera while executing. ~ RM
 // TODO: Offsets map center according to whether side panel is active. ~ RM
 const panThenZoomMap = async (map, coordinates, zoom = 17) => {
   const durationMS = 2000
