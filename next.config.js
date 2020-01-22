@@ -12,6 +12,15 @@ const withOffline = moduleExists('next-offline')
 const customWebpackConfig = config => {
   config.resolve.alias.src = path.join(__dirname, 'src')
   config.resolve.plugins = [new DirectoryNamedWebpackPlugin()]
+
+  // BUG: The following appeared after running `npm install @mapbox/mapbox-gl-draw`:
+  // "Module not found: Can't resolve 'fs' in '/Users/studmuffin/Documents/Apps/solar-calculator/node_modules/jsonlint-lines/lib'"
+  // "Could not find files for /index in .next/build-manifest.json"
+  // ~ RM
+  // QUESTION: Is there a better way to fix this? ~ RM
+  // SOURCE: https://github.com/exceljs/exceljs/issues/299#issuecomment-382425619
+  config.node = { fs: 'empty' }
+
   config.plugins.push(
     new webpack.ProvidePlugin({
       Component: ['react', 'Component'],

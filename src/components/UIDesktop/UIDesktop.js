@@ -7,7 +7,10 @@ const UIDesktop = () => {
 
   return (
     <>
-      <Map isActiveSidePanel={isActiveSidePanel} />
+      <Map
+        isActiveSidePanel={isActiveSidePanel}
+        setIsActiveSidePanel={setIsActiveSidePanel}
+      />
       <PanelSide
         isActive={isActiveSidePanel}
         onClickButtonToggle={onClickSidePanelButtonToggle}

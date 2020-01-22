@@ -1,4 +1,5 @@
 import ButtonToggle from './components/ButtonToggle'
+import Description from './components/Description'
 import Logo from './components/Logo'
 import Result from './components/Result'
 import SearchBar from './components/SearchBar'
@@ -12,12 +13,10 @@ const PanelSide = props => {
   const [results, setResults] = useState(null)
   const [searchBarInputValue, setSearchBarInputValue] = useState('')
 
-  // Fires once after component has mounted.
   useEffect(() => {
     setGeocodingClient(mapboxGeocodingService({ accessToken: mapboxgl.accessToken }))
   }, [])
 
-  // Fires every time value of `results` changes.
   useEffect(() => {
     if (!results) return
     const resultFeatures = []
@@ -54,6 +53,8 @@ const PanelSide = props => {
         })
       })
       setResults(newResults)
+    } else {
+      console.log("response = ", response)
     }
   }
 
@@ -61,6 +62,7 @@ const PanelSide = props => {
   const onSubmitSearch = e => {
     e.preventDefault()
     // TODO: Handle if result equals previous result, etc. ~ RM
+    if (!searchBarInputValue) return
     // TODO: Replace with async/await syntax if possible. ~ RM
     geocodingClient.forwardGeocode({
       autocomplete: false,
@@ -78,6 +80,7 @@ const PanelSide = props => {
   return (
     <Wrapper isActive={props.isActive}>
       <Logo />
+      <Description />
       <SearchBar
         onSubmit={onSubmitSearch}
         onChange={onChangeSearchBarInputValue}

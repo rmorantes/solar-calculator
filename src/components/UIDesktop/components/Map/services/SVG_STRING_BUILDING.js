@@ -1,7 +1,7 @@
 // TODO: Attribution: "Icon made by Freepik from www.flaticon.com" ~ RM
 // https://www.flaticon.com/free-icon/home_834128
 // TODO: Work out math for translate, current value is approximation. ~ RM
-const BUILDING_SVG_STRING = `
+const SVG_STRING_BUILDING = `
   <svg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'>
     <circle
       cx='256'
@@ -16,4 +16,4 @@ const BUILDING_SVG_STRING = `
   </svg>
 `
 
-export default BUILDING_SVG_STRING
+export default SVG_STRING_BUILDING

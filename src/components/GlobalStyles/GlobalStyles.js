@@ -12,7 +12,6 @@ const GlobalStyles = () => (
         margin: 0;
         outline: none;
         padding: 0;
-        user-select: none;
       }
 
       html {
